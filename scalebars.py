@@ -46,8 +46,9 @@ class Scalebars_():
 			plane = self.planes[plane_key]
 			markers_on_plane = self.markers_on_planes[plane_key]
 
+			k = 0
 			for t, marker in enumerate(markers_on_plane):
-				for k, second_marker in enumerate(markers_on_plane[t+1:]):
+				for second_marker in markers_on_plane[t+1:]:
 					new_scalebar = self.chunk.addScalebar(marker, second_marker)
 					p = plane[int(marker.label.split(' ')[1])]
 					q = plane[int(second_marker.label.split(' ')[1])]
@@ -57,6 +58,7 @@ class Scalebars_():
 						new_scalebar.reference.enabled = True
 					else:
 						new_scalebar.reference.enabled = False
+					k += 1
 
 	def update_transform(self,):
 		self.chunk.updateTransform()
