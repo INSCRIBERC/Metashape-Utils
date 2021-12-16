@@ -8,7 +8,9 @@ The number of markers **N** and planes **M** is arbitrary.
 
 The coordinates must be stored into a `.yaml` file like the example `pars.yaml`. 
 
-Starting from the provided set of markers, the script `scalebars.py` generates all the possible scale bars per plane, and subdivides them into two equally numerous subsets of control and check bars. 
+Starting from the provided set of markers, the script `scalebars.py` generates all the possible scale bars per plane, and subdivides them into two equally numerous subsets of control and check bars, as shown in the example below.
+  
+<div align="center"><img src="images/example.png", width="700"></div>
 
 Because of this, in the same `.yaml` parameter file, the user must also provide the accuracy of the scale bars, and the chunk id of the 3D model/mesh/point cloud to scale. 
 
