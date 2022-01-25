@@ -32,7 +32,7 @@ def plot_test(max_num_scalebars, output_savepath, iterations):
 		means, std_dev, color, ecolor = dict_bars[bar_]
 		ax.errorbar(num_scalebars, means, std_dev, linestyle='--', color = color, marker='o', markersize = 7, ecolor = ecolor)
 		ax.grid(which = 'both')
-		ax.set_xlabel(f'Number of {bar_} bars [-]', fontsize = 15)
+		ax.set_xlabel(f'Number of scale bars [-]', fontsize = 15)
 		ax.set_ylabel('RMSE [mm]', fontsize = 15)
 		ax.yaxis.set_major_formatter(FormatStrFormatter('% 1.3f'))
 		plt.savefig(f'./{bar_}_{str(iterations)}_{str(max_num_scalebars)}.png')
